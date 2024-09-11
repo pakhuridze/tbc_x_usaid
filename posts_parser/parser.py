@@ -31,10 +31,10 @@ for thread in threads:
     thread.join()
 
 # sort data after fetching
-posts_arr.sort(key=lambda x: x['id'])
+posts_arr.sort(key=lambda x: x["id"])
 
 # add sorted json
-with open('posts.json', 'w') as f:
+with open("posts.json", "w") as f:
     json.dump(posts_arr, f, indent=3)
 
 end_time = time.time()
