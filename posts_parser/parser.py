@@ -6,7 +6,7 @@ import time
 start_time = time.time()
 
 posts_arr = []
-lock_file = threading.Lock()
+lock = threading.Lock()
 
 
 def fetch_and_save(post_id):
@@ -14,7 +14,7 @@ def fetch_and_save(post_id):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        with lock_file:
+        with lock:
             posts_arr.append(data)
     else:
         print("Can't fetch data")
