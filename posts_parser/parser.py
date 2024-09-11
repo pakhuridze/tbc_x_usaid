@@ -8,6 +8,7 @@ start_time = time.time()
 posts_arr = []
 lock_file = threading.Lock()
 
+
 def fetch_and_save(post_id):
     url = f"https://jsonplaceholder.typicode.com/posts/{post_id}"
     response = requests.get(url)
@@ -17,6 +18,7 @@ def fetch_and_save(post_id):
             posts_arr.append(data)
     else:
         print("Can't fetch data")
+
 
 threads = []
 
