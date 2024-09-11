@@ -18,11 +18,12 @@ def fetch_and_save(post_id, lock_thread):
     else:
         print("Can't fetch data")
 
+
 threads = []
 lock = threading.Lock()
 
 for i in range(1, 78):
-    thread = threading.Thread(target=fetch_and_save, args=(i,lock))
+    thread = threading.Thread(target=fetch_and_save, args=(i, lock))
     thread.start()
     threads.append(thread)
 
