@@ -1,9 +1,11 @@
-import threading
 import json
-import requests
+import threading
 import time
 
+import requests
+
 start_time = time.time()
+
 
 def fetch_and_save(post_id, lock_thread, file):
     url = f"https://jsonplaceholder.typicode.com/posts/{post_id}"
@@ -16,6 +18,7 @@ def fetch_and_save(post_id, lock_thread, file):
             file.write(',\n')  # Ensure each JSON object is on a new line
     else:
         print(f"Can't fetch data for post ID {post_id}")
+
 
 def main():
     lock = threading.Lock()
@@ -35,6 +38,7 @@ def main():
         # Go back to remove the last comma
         file.seek(file.tell() - 2, 0)  # Move back to overwrite the last comma
         file.write(']')  # End the JSON array
+
 
 if __name__ == "__main__":
     main()
