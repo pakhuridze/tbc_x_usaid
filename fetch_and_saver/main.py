@@ -1,9 +1,11 @@
 import asyncio
-import aiohttp
 import json
 import time
 
+import aiohttp
+
 start_time = time.time()
+
 
 async def fetch_and_save(post_id, lock_thread, file):
     url = f"https://jsonplaceholder.typicode.com/posts/{post_id}"
@@ -34,6 +36,7 @@ async def main():
         file.seek(0, 2)  # Move to the end of the file
         file.seek(file.tell() - 2, 0)  # Move back to overwrite the last comma
         file.write(']')  # End the JSON array
+
 
 if __name__ == "__main__":
     asyncio.run(main())
