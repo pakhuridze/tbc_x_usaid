@@ -1,0 +1,25 @@
+aiohttp and async speed results:
+
+Time taken: 0.98 seconds
+Time taken: 1.02 seconds
+Time taken: 0.94 seconds
+Time taken: 0.93 seconds
+Time taken: 0.87 seconds
+Time taken: 0.82 seconds
+Time taken: 0.97 seconds
+Time taken: 0.86 seconds
+Time taken: 0.92 seconds
+Time taken: 0.87 seconds
+
+threads results:
+
+Total Time Taken: 2.16 seconds
+Total Time Taken: 1.55 seconds
+Total Time Taken: 1.42 seconds
+Total Time Taken: 1.42 seconds
+Total Time Taken: 1.41 seconds
+Total Time Taken: 1.4 seconds
+Total Time Taken: 1.43 seconds
+Total Time Taken: 1.39 seconds
+Total Time Taken: 1.28 seconds
+Total Time Taken: 1.46 seconds
