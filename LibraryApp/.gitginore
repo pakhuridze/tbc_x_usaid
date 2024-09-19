@@ -1,57 +1,98 @@
-# Python bytecode
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-
-# Virtual environment
-.venv/
-venv/
-ENV/
-env/
-
-# SQLite database
-*.db
-*.sqlite3
+*.pyo
+*.pyd
+*.pdb
 
 # Distribution / packaging
-build/
-dist/
-*.egg-info/
 *.egg
+*.egg-info/
+dist/
+build/
+eggs/
+lib/
+lib64/
+*.egg-info/
+*.manifest
+*.spec
 
-# IDE/editor specific
-.vscode/
-.idea/
-*.swp
-*.swo
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Logs
-*.log
-
-# Test coverage
+# Unit test / coverage reports
 .coverage
 .coverage.*
 nosetests.xml
+test_*.xml
 coverage.xml
 *.cover
+*.py,cover
 
-# Mypy
+# mypy
 .mypy_cache/
 
-# Pytest
-.pytest_cache/
+# Pyre type checker
+.pyre/
+
+# pytype
+.pytype/
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
 
 # Jupyter Notebook
 .ipynb_checkpoints/
 
+# PyCharm
+.idea/
+
 # Environment variables
 .env
+.env.*
+*.env
+
+# Docker
+docker-compose.override.yml
+Dockerfile.local
 
 # macOS
 .DS_Store
 
 # Windows
 Thumbs.db
+ehthumbs.db
 
-# PyCharm
-*.iml
-*.idea/
+# Linux
+*.swp
+
+# Logs
+*.log
+
+# Coverage
+.coverage
+.coverage.*
+*.cover
+*.py,cover
+
+# Cache files
+*.cache
+
+# Temporary files
+tmp/
+*.tmp
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Build directories
+build/
