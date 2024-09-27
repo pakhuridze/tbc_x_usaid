@@ -53,12 +53,12 @@ class RecipesSpider(scrapy.Spider):
             step_description = step.css("p::text").get().strip()
             steps.append({"step_number": step_number, "description": step_description})
 
-        # Extract portion count (using class .kulinaria-sprite--circleprogress)
+        # Extract portion count
         portion = response.css(
             "div.lineDesc__item .kulinaria-sprite--circleprogress + ::text"
         ).re_first(r"(\d+)")
 
-        # Extract subcategory link (from pagination container)
+        # Extract subcategory link
         subcategory_link = response.css(
             "div.pagination-container a.pagination__item:last-child::attr(href)"
         ).get()
@@ -69,6 +69,7 @@ class RecipesSpider(scrapy.Spider):
         )
 
         recipe = {
+            "recipe_link": response.url,  # Add the recipe link here
             "ingredients": ingredients,
             "steps": steps,
             "portion": portion,

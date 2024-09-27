@@ -13,8 +13,12 @@ SPIDER_MODULES = ["kulinaria.spiders"]
 NEWSPIDER_MODULE = "kulinaria.spiders"
 
 # MongoDB Settings
-MONGO_URI = "mongodb://localhost:27017"
-MONGO_DATABASE = "recipes_database"  # Your database name
+
+# settings.py
+
+MONGO_URI = "mongodb://localhost:27017"  # Adjust this according to your setup
+MONGO_DATABASE = "recipes_database"
+
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

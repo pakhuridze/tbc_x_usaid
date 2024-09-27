@@ -1,4 +1,6 @@
 import pymongo
+import logging
+
 
 class MongoDBPipeline:
     def __init__(self, mongo_uri, mongo_db):
@@ -18,12 +20,17 @@ class MongoDBPipeline:
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
         self.collection = self.db["recipes"]  # Define the collection
+        logging.info(f"Connected to MongoDB database: {self.mongo_db}")
 
     def close_spider(self, spider):
         # Close MongoDB connection when spider is closed
         self.client.close()
+        logging.info("MongoDB connection closed.")
 
     def process_item(self, item, spider):
+        # Log the item being processed
+        logging.info(f"Processing item: {item}")
+
         # Insert or update scraped data into MongoDB
         self.collection.update_one(
             {"recipe_link": item.get("recipe_link")},
